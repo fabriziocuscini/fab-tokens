@@ -1,0 +1,11 @@
+{
+	"type": "module",
+	"scripts": {
+		"build:tokens": "node build-tokens.js",
+		"build:tokens:clean": "rm -rf build && pnpm run build:tokens"
+	},
+	"devDependencies": {
+		"@tokens-studio/sd-transforms": "^2.0.1",
+		"style-dictionary": "^5.0.0"
+	}
+}
