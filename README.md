@@ -5,8 +5,12 @@ A design token system built with Tokens Studio in Figma, leveraging on Style Dic
 ## Features
 
 - Design token management
-- Theme support
 - Cross-platform compatibility
+
+## Out of scope
+
+- Light/dark mode
+- Multiple themes
 
 ## Getting Started
 
