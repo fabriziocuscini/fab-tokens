@@ -108,6 +108,34 @@ When adding or updating tokens:
 3. Create a Pull Request with the changes
 4. Once merged, run `pnpm run build:tokens` to generate updated platform files
 
+## Known Limitations
+
+### Tokens Studio Free Version
+
+This project currently uses the **FREE version** of Tokens Studio, which has the following limitations:
+
+#### Single-File Export Only
+
+- **Current**: All tokens are exported into a single `tokens/tokens.json` file
+- **Impact**: The `excludeParentKeys: true` configuration flattens token names
+  - We get: `--base-unit: 0.25rem;` instead of `--spacing-base-unit: 0.25rem;`
+  - We get: `--semantic-danger: #ff4034;` instead of `--colors-semantic-danger: #ff4034;`
+- **PRO solution**: Multi-file export would preserve full token hierarchy and naming
+
+#### No Multi-Theming Support
+
+- **Current**: Cannot generate tokens for multiple themes (light/dark modes)
+- **Impact**: Limited to a single design system variant
+- **PRO solution**: Multi-dimensional theming with automatic theme file generation
+
+### Upgrading to Tokens Studio PRO
+
+With [Tokens Studio PRO](https://tokens.studio/pricing), we would gain:
+
+1. **Multi-file token exports** → Preserved token naming hierarchy
+2. **Multi-dimensional theming** → Light/dark mode support + theme combinations
+3. **Advanced token management** → Better organization and workflows
+
 ## Notes
 
 - Mathematical expressions in tokens (like `1 * {baseUnit}`) are automatically evaluated during the build process
